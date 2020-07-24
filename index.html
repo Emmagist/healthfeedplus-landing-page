@@ -21,6 +21,11 @@
           <li><a href="#medical">Our Medical Service</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
+        <!-- <div class="hamburg" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div> -->
         <div class="logo"><img src="img/logo2.jpg" alt=""></div>
       </div>
       <div class="menu-header text-center">
@@ -28,7 +33,7 @@
           <div class="row">
             <div class="col-md-4 mt-5 menu-header-div">
               <h3>Subscribe To Our Newslatter</h3>
-              <form action="" class="form-wrapper">
+              <form action="" class="form-wrapper" id="subscribe">
                 <h4 class="mb-4 form-h4">Be the first to know <br> when we go live.</h4>
                 <div class="form-div">
                   <input type="text" class="mb-4" placeholder="Full-Name"><br>
@@ -39,8 +44,8 @@
             </div>
             <div class="col-md-8 div-slide-two">
               <h3 class="">We are on this Journey Together</h3>
-              <p>We're help, guide,and inspire our users to make life-changing health decisions and choose healthy <br> lifestyle as a necessity.</p>
-              <h6 class="text-center">message us</h6>
+              <p class="div-slide-p">We're help, guide and inspire our users to make life-changing health decisions and choose healthy <br> lifestyle as a necessity.</p>
+              <h6 class="text-center"><a href="#message-us">message us</a></h6>
             </div>
           </div>
         </div>
@@ -61,7 +66,7 @@
           <div class="col-md-6 about-div-two">
             <p>We leverage on the combined experience of our multi-disciplinary team of experts who have demonstrated an appreciable level of competence and authority in their variuos fields and strictly sourced from different geographical locations to ensure the delivery of credible health information for all.</p>
             <p><i>Join our wait list to get notified when we go live.</i></p>
-            <h6 class="text-center">subscribe</h6>
+            <h6 class="text-center"><a href="#subscribe">subscribe</a></h6>
           </div>
         </div>
       </div>
@@ -120,7 +125,7 @@
           </div>
           <div class="col-md-6">
             <h3 class="mb-5" id="contact">Message Us</h3>
-            <form action="" method="post" class="fooeter-form">
+            <form action="" method="post" class="fooeter-form" id="message-us">
               <input type="text" placeholder="Full Name" class="mb-3">
               <input type="text" placeholder="Email" class="mb-3">
               <textarea name="" id="" cols="20" rows="5" placeholder="Message" class="mb-3"></textarea>
@@ -131,5 +136,11 @@
       </div>
     </footer>
   </section>
+
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+  </script>
 </body>
 </html>
