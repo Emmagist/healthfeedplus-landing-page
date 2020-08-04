@@ -1,3 +1,6 @@
+
+<?php require_once "process.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +19,16 @@
   <section class="header-section">
     <header class="main-header">
       <div class="small-header">
-        <ul id="header-span">
+        <ul id="header-span" class="header-ul-span">
           <li><a href="#about">About Us</a></li>
           <li><a href="#medical">Our Medical Service</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
-        <!-- <div class="hamburg" onclick="myFunction(this)">
+        <div class="hamburg" onclick="myFunction(this)">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
-        </div> -->
+        </div>
         <div class="logo"><img src="img/logo2.jpg" alt=""></div>
       </div>
       <div class="menu-header text-center">
@@ -33,12 +36,13 @@
           <div class="row">
             <div class="col-md-4 mt-5 menu-header-div">
               <h3>Subscribe To Our Newslatter</h3>
-              <form action="" class="form-wrapper" id="subscribe">
+              <form action="" method="POST" class="form-wrapper" id="subscribe">
                 <h4 class="mb-4 form-h4">Be the first to know <br> when we go live.</h4>
                 <div class="form-div">
-                  <input type="text" class="mb-4" placeholder="Full-Name"><br>
-                  <input type="text" class="mb-4" placeholder="Email"><br>
-                  <button type="submit" class="">SUBSCRIBE</button>
+                  <?php if (isset($error)) {echo $error;} ?>
+                  <input type="text" class="mb-4" placeholder="Full-Name" name="name"><br>
+                  <input type="text" class="mb-4" placeholder="Email" name="email"><br>
+                  <button type="submit" class="" name="subscribe">SUBSCRIBE</button>
                 </div>
               </form>
             </div>
@@ -126,10 +130,11 @@
           <div class="col-md-6">
             <h3 class="mb-5" id="contact">Message Us</h3>
             <form action="" method="post" class="fooeter-form" id="message-us">
-              <input type="text" placeholder="Full Name" class="mb-3">
-              <input type="text" placeholder="Email" class="mb-3">
-              <textarea name="" id="" cols="20" rows="5" placeholder="Message" class="mb-3"></textarea>
-              <button type="submit">SEND</button>
+              <?php if (isset($error)) {echo $error;} ?>
+              <input type="text" placeholder="Full Name" class="mb-3" name="name">
+              <input type="text" placeholder="Email" class="mb-3" name="email">
+              <textarea name="message" id="" cols="20" rows="5" placeholder="Message" class="mb-3"></textarea>
+              <button type="submit"  name="send">SEND</button>
             </form>
           </div>
         </div>

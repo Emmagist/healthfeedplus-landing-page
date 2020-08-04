@@ -82,7 +82,7 @@ body{
   padding: 5px;
   margin-left: 10px;
   /* color: #399b52; */
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: 600;
 }
 
@@ -119,6 +119,7 @@ body{
 
 .menu-header-div{
   background: gray;
+  margin-bottom: 20px;
 }
 
 .menu-header h3{
@@ -131,7 +132,7 @@ body{
   background: var(--white);
   border-radius: 10px;
   width: 100%;
-  height: 48vh;
+  height: 52vh;
   animation: moveInLeft 1s ease-out;
 }
 
@@ -448,7 +449,7 @@ h6 > a:hover{
 }
 
 @media screen and (min-width: 360px){
-  #header-span{
+  .header-ul-span{
     display: none;
   }
   .hamburg{
@@ -465,11 +466,11 @@ h6 > a:hover{
   }
 
   .menu-header-div{
-    background: transparent;
+    
   }
 
   .div-slide-p{
-    color: gray;
+    color: black;
     font-size: 18px;
   }
 
