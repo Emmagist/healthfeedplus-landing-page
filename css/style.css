@@ -25,6 +25,7 @@ body{
 }
 
 #header-span li{
+  position: relative;
   display: inline-block;
   text-decoration: none;
   padding: 15px;
@@ -52,7 +53,7 @@ body{
   padding-right: 20px;
 }
 
-/* .hamburg{
+.hamburg{
   display: none;
 }
 
@@ -73,16 +74,17 @@ body{
 
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px); */
-
+  transform: rotate(45deg) translate(-8px, -8px); 
+}
 /* logo header satrt */
 
 .logo{
+  /* display: none; */
   position: absolute;
   padding: 5px;
   margin-left: 10px;
   /* color: #399b52; */
-  margin-top: 10px;
+  /* margin-top: 5px; */
   font-weight: 600;
 }
 
@@ -201,8 +203,9 @@ h6 > a:hover{
 
 /* about section */
 .about-div-one p, .about-div-two p{
+  font-family: Arial, Helvetica, sans-serif;
   color: black;
-  font-size: 17px;
+  font-size: 20px;
   /* text-align: center; */
   font-weight: 400;
 }
@@ -246,13 +249,14 @@ h6 > a:hover{
 }
 
 #medical h4{
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 5px;
 }
 
 .main-service-div p, .main-service-div-two p{
+  font-family: Arial, Helvetica, sans-serif;
   /* color: black; */
   font-size: 17px;
   /* text-align: center; */
@@ -448,12 +452,12 @@ h6 > a:hover{
   }
 }
 
-@media screen and (min-width: 360px){
+@media screen and (max-width: 360px){
   .header-ul-span{
-    display: none;
+    /* display: none; */
   }
   .hamburg{
-    display: inline-block;
+    display: block;
     cursor: pointer;
   }
 
@@ -476,5 +480,45 @@ h6 > a:hover{
 
   h6{
     width: 30%;
+  }
+}
+
+@media screen and (max-width: 414px){
+  .header-ul-span{
+    display: none;
+  }
+  
+  .hamburg{
+    display: block;
+    float: right;
+  }
+
+  .bar1, .bar2, .bar3 {
+    background: black;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px); 
+  }  
+
+  .menu-header{
+    background: url("../img/2.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    opacity: 1;
   }
 }
