@@ -24,11 +24,20 @@
           <li><a href="#medical">Our Medical Service</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
-        <div class="hamburg" onclick="myFunction(this)">
+        <!-- <div class="hamburg" onclick="myFunction(this)">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
+        </div> -->
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#about">About</a>
+            <a href="#medical">Our Medical Service</a>
+            <a href="#contact">Contact Us</a>
+          </div>
         </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="burger">&#9776;</span>
         <div class="logo"><img src="img/logo2.jpg" alt=""></div>
       </div>
       <div class="menu-header text-center">
@@ -83,24 +92,28 @@
       <h3 class="text-center">Best Services Ever</h3>
       <h4 class="text-center">Our Medical Services</h4>
       <div class="row service-row">
-        <div class="col-md-3 main-service-div">
+        <div class="col-md-3 main-service-div" id="main-service-div-sample">
           <h3>24/7 Consultation</h3>
           <p>We give prompt response to specific questions or information pertaining to the health needs of our users, using the combined experince and expertise of our health consultants to meet clients health goals.</p>
         </div>
-        <div class="col-md-3 main-service-div-two">
+        <div class="col-md-3 main-service-div-two" id="div-sample">
           <h3>Podcasting</h3>
+          <img src="img/2.jpg" alt="" class="pod-img">
           <p>We cannot afford to leave our consumers stranded on their journey to good health. We're on a course to redefine healthy living through our audio programs curated to help them live more and do more.</p>
         </div>
-        <div class="col-md-3 main-service-div-two">
+        <div class="col-md-3 main-service-div-two" id="div-sample">
           <h3>Community Support</h3>
+          <img src="img/2.jpg" alt="" class="pod-img">
           <p>Our HealthFeedplus Insider is a community of survivors of health challenge or the other. <br>We believe they are not alone. Ww're right here for them...</p>
         </div>
-        <div class="col-md-3 main-service-div-two">
+        <div class="col-md-3 main-service-div-two" id="worldwide">
           <h3>Worldwide Campus Ambassadorship Program</h3>
+          <img src="img/2.jpg" alt="" class="" id="pod-img">
           <p>The students are not left out in this as they may find the platform useful for theier classroom assignments. It encourages the intentional usage of health information for health life style.</p>
         </div>
-        <div class="col-md-3 main-service-div-two">
+        <div class="col-md-3 main-service-div-two" id="main-service-div-sample-two">
           <h3>Ambulance Service</h3>
+          <img src="img/2.jpg" alt="" class="pod-img">
           <p>We understand the impacts of emergency situations especially in some region where ambulance service is a challenging.</p>
         </div>
       </div>
@@ -120,11 +133,11 @@
               <li><a href="#contact">Contact Us</a></li>
             </ul>
             <ul class="media-footer-ul">
-              <li><a href="#about" class="fa fa-instagram instagram" aria-hidden="true"></a></li>
-              <li><a href="#about" class="fa  fa-youtube youtube" aria-hidden="true"></a></li>
-              <li><a href="#about" class="fa fa-facebook-f facebook-f" aria-hidden="true"></a></li>
-              <li><a href="#about" class="fa fa-twitter twitter" aria-hidden="true"></a></li>
-              <li><a href="#about" class="fa fa-linkedin linkedin" aria-hidden="true"></a></li>
+              <li><a href="#" class="fa fa-instagram instagram" aria-hidden="true"></a></li>
+              <li><a href="#" class="fa  fa-youtube youtube" aria-hidden="true"></a></li>
+              <li><a href="#" class="fa fa-facebook-f facebook-f" aria-hidden="true"></a></li>
+              <li><a href="#" class="fa fa-twitter twitter" aria-hidden="true"></a></li>
+              <li><a href="#" class="fa fa-linkedin linkedin" aria-hidden="true"></a></li>
             </ul>
           </div>
           <div class="col-md-6">
@@ -143,8 +156,17 @@
   </section>
 
   <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
+    // function myFunction(x) {
+    //   x.classList.toggle("change");
+    // }
+
+    
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
     }
   </script>
 </body>
