@@ -114,29 +114,6 @@ body{
 }
 /* hamburger end */
 
-/* .hamburg{
-  display: none;
-} */
-
-/* .bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px); 
-} */
 /* logo header satrt */
 
 .logo{
@@ -156,7 +133,7 @@ body{
 /* logo header ends */
 
 .main-navbar{
-  background: url("../img/images.jpg") no-repeat;
+  background: url("../img/support.jpg") no-repeat;
   background-size: cover;
   min-height: 85vh;
 }
@@ -166,7 +143,7 @@ body{
 }
 
 .menu-header{
-  background: url("../img/2.jpg") no-repeat;
+  background: url("../img/support.jpg") no-repeat;
   /* background-position: center; */
   background-size: cover;
   /* background-color: gray; */
@@ -264,6 +241,10 @@ h6 > a:hover{
   padding: 15p;
 }
 
+#hide-row{
+  display: none;
+}
+
 /* about section */
 .about-div-one p, .about-div-two p{
   font-family: Proxima Nova Condensed, System-ui, San-serif;
@@ -358,7 +339,11 @@ h6 > a:hover{
 }
 
 #main-service-div-sample-two{
-  height: 50vh;
+  height: 52vh;
+}
+
+#pod-img-two{
+  height: 25vh;
 }
 
 .service-row{
@@ -466,6 +451,10 @@ h6 > a:hover{
   height: 48vh;
 }
 
+.copywrite{
+  margin-top: 25px;
+}
+
 /* Animations */
 
 @keyframes moveInLeft{
@@ -541,16 +530,13 @@ h6 > a:hover{
 }
 
 @media screen and (max-width: 360px){
-  .header-ul-span{
-    /* display: none; */
-  }
   .hamburg{
     display: block;
     cursor: pointer;
   }
 
   .menu-header{
-    background: url("../img/2.jpg") no-repeat;
+    background: url("../img/support.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -570,48 +556,38 @@ h6 > a:hover{
   h6{
     width: 30%;
   }
+
+  #show-row{
+    display: none;
+  }
+
+  /* footer */
+  .copywrite{
+    margin-top: 15px;
+  }
+  /* footer end */
 }
 
 @media screen and (max-width: 414px){
   .header-ul-span{
     display: none;
   }
-/*   
-  .hamburg{
-    display: block;
-    float: right;
-    margin-right: 20px;
-    margin-top: 15px;
-  }
-
-  .bar1, .bar2, .bar3 {
-    background: black;
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px); 
-  }   */
 
   .menu-header{
-    background: url("../img/home-slide2.jpg") no-repeat;
+    background: url("../img/support.jpg") no-repeat;
     /* background: red; */
     background-position: center;
     background-size: cover;
     height: 100%;
     opacity: 1;
+  }
+
+  #hide-row{
+    display: flex;
+  }
+
+  #show-row{
+    display: none;
   }
 
   #burger{
@@ -659,7 +635,7 @@ h6 > a:hover{
   }
 
   .pod-img{
-    width: 17rem;
+    width: 20rem;
     height: 30%;
     margin-left: -21px;
     margin-right: -20px;
@@ -668,8 +644,8 @@ h6 > a:hover{
   }
 
   #pod-img{
-    width: 17rem;
-    height: 20%;
+    width: 20rem;
+    height: 25%;
     margin-left: -21px;
     margin-right: -20px;
     margin-bottom: 10px;
@@ -677,15 +653,19 @@ h6 > a:hover{
   }
   
   #main-service-div-sample{
-    height: 50vh;
+    height: 32vh;
   }
 
   #worldwide{
-    height: 40rem;
+    height: 25rem;
   }
   
   #main-service-div-sample-two{
-    height: 48vh;
+    height: 40vh;
+  }
+
+  #pod-img-two{
+    height: 13vh;
   }
   /* service end */
 
@@ -712,6 +692,10 @@ h6 > a:hover{
     /* background: var(--white); */
     border-radius: 50%;
     box-shadow: 2px 2px 2px 3px rgb(207, 202, 202);
+  }
+
+  .copywrite{
+    margin-top: 15px;
   }
   /* footer end */
 }
@@ -722,8 +706,7 @@ h6 > a:hover{
   }
 
   .menu-header{
-    background: url("../img/home-slide2.jpg") no-repeat;
-    /* background: red; */
+    background: url("../img/support.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -735,6 +718,10 @@ h6 > a:hover{
     float: right;
     margin-right: 20px;
     margin-top: 15px;
+  }
+
+  #show-row{
+    display: none;
   }
 
   .menu-header-div{
@@ -828,6 +815,10 @@ h6 > a:hover{
     /* background: var(--white); */
     border-radius: 50%;
     box-shadow: 2px 2px 2px 3px rgb(207, 202, 202);
+  }
+
+  .copywrite{
+    margin-top: 15px;
   }
   /* footer end */
 }

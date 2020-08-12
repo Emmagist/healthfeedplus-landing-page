@@ -42,7 +42,7 @@
       </div>
       <div class="menu-header text-center">
         <div class="col-md-12">
-          <div class="row">
+          <div class="row" id="show-row">
             <div class="col-md-4 mt-5 menu-header-div">
               <h3>Subscribe To Our Newslatter</h3>
               <form action="" method="POST" class="form-wrapper" id="subscribe">
@@ -57,8 +57,27 @@
             </div>
             <div class="col-md-8 div-slide-two">
               <h3 class="">We are on this Journey Together</h3>
+              <p class="div-slide-p">We help, guide and inspire our users to make life-changing health decisions and choose healthy <br> lifestyle as a necessity.</p>
+              <h6 class="text-center"><a href="#message-us">message us</a></h6>
+            </div>
+          </div>
+          <div class="row" id="hide-row">
+            <div class="col-md-8 div-slide-two">
+              <h3 class="">We are on this Journey Together</h3>
               <p class="div-slide-p">We're help, guide and inspire our users to make life-changing health decisions and choose healthy <br> lifestyle as a necessity.</p>
               <h6 class="text-center"><a href="#message-us">message us</a></h6>
+            </div>
+            <div class="col-md-4 mt-5 menu-header-div">
+              <h3>Subscribe To Our Newslatter</h3>
+              <form action="" method="POST" class="form-wrapper" id="subscribe">
+                <h4 class="mb-4 form-h4">Be the first to know <br> when we go live.</h4>
+                <div class="form-div">
+                  <?php if (isset($error)) {echo $error;} ?>
+                  <input type="text" class="mb-4" placeholder="Full-Name" name="name"><br>
+                  <input type="text" class="mb-4" placeholder="Email" name="email"><br>
+                  <button type="submit" class="" name="subscribe">SUBSCRIBE</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -98,22 +117,22 @@
         </div>
         <div class="col-md-3 main-service-div-two" id="div-sample">
           <h3>Podcasting</h3>
-          <img src="img/2.jpg" alt="" class="pod-img">
+          <img src="img/podcast.jpg" alt="" class="pod-img">
           <p>We cannot afford to leave our consumers stranded on their journey to good health. We're on a course to redefine healthy living through our audio programs curated to help them live more and do more.</p>
         </div>
         <div class="col-md-3 main-service-div-two" id="div-sample">
           <h3>Community Support</h3>
-          <img src="img/2.jpg" alt="" class="pod-img">
+          <img src="img/support.jpg" alt="" class="pod-img">
           <p>Our HealthFeedplus Insider is a community of survivors of health challenge or the other. <br>We believe they are not alone. Ww're right here for them...</p>
         </div>
         <div class="col-md-3 main-service-div-two" id="worldwide">
           <h3>Worldwide Campus Ambassadorship Program</h3>
-          <img src="img/2.jpg" alt="" class="" id="pod-img">
+          <img src="img/ambassador.jpg" alt="" class="" id="pod-img">
           <p>The students are not left out in this as they may find the platform useful for theier classroom assignments. It encourages the intentional usage of health information for health life style.</p>
         </div>
         <div class="col-md-3 main-service-div-two" id="main-service-div-sample-two">
           <h3>Ambulance Service</h3>
-          <img src="img/2.jpg" alt="" class="pod-img">
+          <img src="img/amblance.jpg" alt="" class="pod-img" id="pod-img-two">
           <p>We understand the impacts of emergency situations especially in some region where ambulance service is a challenging.</p>
         </div>
       </div>
@@ -151,6 +170,7 @@
             </form>
           </div>
         </div>
+        <div class="copywrite">HealthFeed<span class="text-success">Plus</span> &#169; 2020 Alright Reserved.</div>
       </div>
     </footer>
   </section>
