@@ -561,6 +561,10 @@ h6 > a:hover{
     display: none;
   }
 
+  /* #main-service-div-sample-two{
+    height: 40vh;
+  } */
+
   /* footer */
   .copywrite{
     margin-top: 15px;
@@ -653,7 +657,12 @@ h6 > a:hover{
   }
   
   #main-service-div-sample{
-    height: 32vh;
+    height: 25vh;
+  }
+
+  #main-service-div-sample > p{
+    /* height: 40vh; */
+    margin-top: -45px;
   }
 
   #worldwide{
@@ -758,7 +767,7 @@ h6 > a:hover{
   }
 
   #div-sample{
-    height: 50vh;
+    height: 67vh;
   }
 
   .pod-img{
@@ -780,15 +789,21 @@ h6 > a:hover{
   }
   
   #main-service-div-sample{
-    height: 50vh;
+    height: 40vh;
+    /* margin-top: 0px; */
+  }
+
+  #main-service-div-sample > p{
+    /* height: 40vh; */
+    margin-top: -75px;
   }
 
   #worldwide{
-    height: 40rem;
+    height: 30rem;
   }
   
   #main-service-div-sample-two{
-    height: 48vh;
+    height: 55vh;
   }
   /* service end */
 
