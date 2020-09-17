@@ -110,18 +110,18 @@ class Database {
     return $error;
 }
 
-  public static function ValidationForMessage($error){
+  public static function ValidationForMessage($conerror){
     if (empty($_POST['name'])) { //check for empty email
-      $error = "<p style='color:red;padding:10px;font-weight:bold;font-size:18px;'>The name field can not be empty</p>";
+      $conerror = "<p style='color:red;padding:10px;font-weight:bold;font-size:18px;'>The name field can not be empty</p>";
     }elseif (empty($_POST['email'])) { //check for empty email
-      $error = "<p style='color:red; padding:10px'>The email field can not be empty</p>";
+      $conerror = "<p style='color:red; padding:10px'>The email field can not be empty</p>";
     }else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
-      $error = "<p style='color:red;padding:10px;font-weight:bold;font-size:18px;'>Provide a valid email format</p>";
+      $conerror = "<p style='color:red;padding:10px;font-weight:bold;font-size:18px;'>Provide a valid email format</p>";
     }else if(empty($_POST['message'])){
-      $error = "<p style='color:red;padding:10px;font-weight:bold;font-size:18px;'>The message field can not be empty</p>";
+      $conerror = "<p style='color:red;padding:10px;font-weight:bold;font-size:18px;'>The message field can not be empty</p>";
     }
 
-    return $error;
+    return $conerror;
   }
 
   

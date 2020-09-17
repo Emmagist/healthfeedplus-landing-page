@@ -48,9 +48,9 @@
               <form action="" method="POST" class="form-wrapper" id="subscribe">
                 <h4 class="mb-4 form-h4">Be the first to know <br> when we go live.</h4>
                 <div class="form-div">
-                  <?php if (isset($error)) {echo $error;} ?>
+                  <?php if (!empty($error)) {echo $error;} ?>
                   <input type="text" class="mb-4" placeholder="Full-Name" name="name"><br>
-                  <input type="text" class="mb-4" placeholder="Email" name="email"><br>
+                  <input type="email" class="mb-4" placeholder="Email" name="email"><br>
                   <button type="submit" class="" name="subscribe">SUBSCRIBE</button>
                 </div>
               </form>
@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="row" id="hide-row">
-            <div class="col-md-8 div-slide-two">
+            <div class="col-md-8 div-slide-two" id="div-slide-two-id">
               <h3 class="">We are on this Journey Together</h3>
               <p class="div-slide-p">We're help, guide and inspire our users to make life-changing health decisions and choose healthy <br> lifestyle as a necessity.</p>
               <h6 class="text-center"><a href="#message-us">message us</a></h6>
@@ -87,7 +87,7 @@
 
   <!-- about section -->
   <section>
-    <div class="about-wrapper mt-5" id="about">
+    <div class="about-wrapper" id="about">
       <div class="col-md-12">
         <h3 class="mb-4 text-center">about us</h3>
         <h4 class="mb-4 text-center">short story about healthfeed<span>plus</span></h4>
@@ -162,11 +162,11 @@
           <div class="col-md-6">
             <h3 class="mb-5" id="contact">Message Us</h3>
             <form action="" method="post" class="fooeter-form" id="message-us">
-              <?php if (isset($error)) {echo $error;} ?>
-              <input type="text" placeholder="Full Name" class="mb-3" name="name">
+              <?php if (!empty($conerror)) {echo $conerror;} ?>
+              <input type="text" placeholder="Full Name" class="mb-3" name="full_name">
               <input type="text" placeholder="Email" class="mb-3" name="email">
               <textarea name="message" id="" cols="20" rows="5" placeholder="Message" class="mb-3"></textarea>
-              <button type="submit"  name="send">SEND</button>
+              <button type="submit"  name="send">Send</button>
             </form>
           </div>
         </div>
