@@ -838,12 +838,17 @@ h6 > a:hover{
   }
 
   #pod-img{
-    width: 17rem;
+    width: 16.8rem;
     height: 20%;
     margin-left: -21px;
     margin-right: -20px;
     margin-bottom: 10px;
     margin-top: 5px;
+  }
+
+  .service-row{
+    text-align: center;
+    align-items: center;
   }
   
   #main-service-div-sample{
@@ -870,8 +875,9 @@ h6 > a:hover{
 
   #worldwide{
     height: 30rem;
-    /* margin-right: 50px; */
-    /* width: 80%; */
+    /* margin-left: 2px; */
+    /* margin-right: -0; */
+    width: 74.5%;
   }
   
   #main-service-div-sample-two{
@@ -933,9 +939,9 @@ h6 > a:hover{
     /* opacity: 1.5; */
   } */
 
-  .menu-header-div{
+  /* .menu-header-div{ */
     /* background: transparent; */
-  }
+  /* } */
 
   /* .form-wrapper{
     background: var(--white);
