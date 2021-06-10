@@ -1,48 +1,30 @@
 <?php
 
-  require_once "db.php";
+    require "phpMailer.php";
 
-  global $db;
-  $error='';
+    if (isset($_GET['contData'])) {
+        $name = mysqli_real_escape_string($db, $_POST['name']);
+        $email = mysqli_real_escape_string($db, $_POST['email']);
+        $message = mysqli_real_escape_string($db, $_POST['message']);
 
-  if (isset($_POST['subscribe'])) {
-    $name = $db->escape($_POST['name']);
-    $email = $db->escape($_POST['email']);
-    $time = CURRENT_TIME;
-    $date = CURRENT_DATE;
-    $error = Database::ValidationForRegistration($error);
-
-    if (empty($error)) {
-      // $row = $db->findUserByEmail($email);
-      // if($email = $row){
-      //   $error = "Email already exist";
-      // } else {
-        $db->saveData(TBL_USER, "full_name = '$name', email = '$email', message = '', status = '0', time = '$time', date = '$date'");
-        $error = "<p class='text-success;padding:10px;font-weight:bold;font-size:18px;'>You have successfully subscribe. You will see us live soon.</p>";
-        // header("Location: index.php");
-      //}
-        
+        if (isset($name, $email)) {
+            $sql = "INSERT INTO health_message(full_name, email, message) VALUES('$name', '$email', '$message')";
+            mysqli_query($db, $sql);
+            echo json_encode("Message Sent");
+        }
     }
-  }
 
-  if (isset($_POST['send'])) {
-    $conerror='';
-    // $message = '';
-    $name = $db->escape($_POST['full_name']);
-    $email = $db->escape($_POST['email']);
-    $message = $db->escape($_POST['message']);
-    $time = CURRENT_TIME;
-    $date = CURRENT_DATE;
-    $conerror = Database::ValidationForMessage($conerror);
+    if (isset($_GET['regData'])) {
+        $name = mysqli_real_escape_string($db, $_POST['full_name']);
+        $email = mysqli_real_escape_string($db, $_POST['reg_email']);
 
-    if (empty($conerror)) {
-       $e =  $db->saveData(TBL_USER, "full_name = '$name', email = '$email', message = '$message', status = '1', time = '$time', date = '$date'");
-      //  var_dump ($e);exit;
-        $error = "<p class='text-success;padding:10px;font-weight:bold;font-size:18px;'>You have successfully subscribe. You will see us live soon.</p>"; 
-        // header("Location: index.php");
-      //}
-        
+        if (isset($name, $email)) {
+            $sql = "INSERT INTO health_subscribe(full_name, email) VALUES('$name', '$email')";
+            mysqli_query($db, $sql);
+            echo json_encode("Subscribed");
+            $emailVer->sendMailer($email,$name);
+            $emailVer->sendMailer($email,$name);
+        }
     }
-  }
 
 ?>
